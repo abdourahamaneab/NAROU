@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.test1_projet.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_activityVille_Info"
+            app:destination="@id/activityVille_Info" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityVille_Info"
+        android:name="com.example.test1_projet.ActivityVille_Info"
+        android:label="fragment_activity_ville__info"
+        tools:layout="@layout/fragment_activity_ville__info" />
+</navigation>

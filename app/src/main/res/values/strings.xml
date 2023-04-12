@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">test1_projet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="VoyageSearch">Envie de voyage!</string>
+    <string name="VoyageSearch2">Taper votre destinations...</string>
+    <string name="recommended">Nos recommandation</string>
+    <string name="resto">Resto</string>
+    <string name="hotel">Hotel</string>
+    <string name="activite">Activite</string>
+    <string name="plusViste">Les plus visités</string>
+    <string name="maps">Voir la map</string>
+    <string name="attraction">Les attractions populaires</string>
+    <string name="france">France</string>
+    <string name="italie">Italie</string>
+    <string name="espagne">Espagne</string>
+    <string name="USA">USA</string>
+    <string name="Dubai"> Dubai </string>
+    <string name="Mexique"> Mexique </string>
+    <string name="Chine"> Chine </string>
+</resources>
