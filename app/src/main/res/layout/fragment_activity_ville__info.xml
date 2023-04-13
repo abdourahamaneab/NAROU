@@ -24,10 +24,11 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:id="@+id/imageHaut"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
 
+                android:scaleType="fitXY"
                 app:srcCompat="@drawable/louvre" />
 
 
@@ -58,7 +59,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/NomPays"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -85,7 +86,7 @@
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/NomPays" />
 
         <View
             android:id="@+id/view"
@@ -104,15 +105,15 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="#4A4A4A"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerViewA" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_Voirplus" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_resto"
             android:layout_width="166dp"
             android:layout_height="52dp"
             android:layout_marginStart="16dp"
@@ -125,7 +126,7 @@
             android:text="@string/resto"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintEnd_toStartOf="@+id/button4"
+            app:layout_constraintEnd_toStartOf="@+id/btnhotellist"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
 
@@ -153,9 +154,12 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:clipToPadding="false"
             android:paddingLeft="5dp"
             android:paddingTop="10dp"
             android:paddingRight="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_Voirplus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/attractionsText"
             app:layout_constraintTop_toBottomOf="@+id/attractionsText">
@@ -163,7 +167,7 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnhotellist"
             android:layout_width="180dp"
             android:layout_height="55dp"
             android:layout_marginStart="8dp"
@@ -177,8 +181,25 @@
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintStart_toEndOf="@+id/btn_resto"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <Button
+            android:id="@+id/btn_Voirplus"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/arronditbtn"
+            android:backgroundTint="#3F51B5"
+            android:text="@string/voirPlus"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewA" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

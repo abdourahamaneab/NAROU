@@ -4,12 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 
 
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test1_projet.Data.AttractionData
+import com.example.test1_projet.Data.PaysDatas
+import com.example.test1_projet.Models.PaysModel
+import androidx.navigation.fragment.findNavController
 import com.example.test1_projet.R.*
 import com.example.test1_projet.adapter.AttractionListAdapter
 
@@ -28,15 +35,22 @@ class ActivityVille_Info : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var pays: String
+    lateinit var btVoirPlus: Button
+    lateinit var btnHotel: Button
+    lateinit var btnResto: Button
 
     private lateinit var adapter: AttractionListAdapter
-    private val attractions = AttractionData().attractions
+    private val attractions = AttractionData().france
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
+
+
         }
     }
 
@@ -48,9 +62,28 @@ class ActivityVille_Info : Fragment() {
         val view = inflater.inflate(layout.fragment_activity_ville__info, container, false)
         adapter = AttractionListAdapter(attractions)
 
+        pays = arguments?.getString("pays").toString().toLowerCase()
+        println(pays)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewA)
         recyclerView.layoutManager = LinearLayoutManager(activity)
         recyclerView.adapter = adapter
+        loadDonnerPays(view, pays)
+        // action de cliquer sur le boutton voirPlus
+        btVoirPlus=view.findViewById(R.id.btn_Voirplus)
+        btVoirPlus.setOnClickListener {
+            onclickerVoirplus()
+        }
+        // action de cliquer sur le boutton hotel
+        btnHotel = view.findViewById(R.id.btnhotellist)
+        btnHotel.setOnClickListener {
+            onclickHotels()
+        }
+
+        // action de cliquer sur le boutton resto
+        btnResto = view.findViewById(R.id.btn_resto)
+        btnResto.setOnClickListener {
+            onclickResto()
+        }
 
         return view
     }
@@ -73,5 +106,40 @@ class ActivityVille_Info : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    // fonction qui charge les données(photo, nom, description)
+    fun loadDonnerPays(view: View, paysT: String) {
+        val pays = PaysDatas().getPaysByName(paysT)
+        val nomPays: String = pays?.name ?: "Pays inconnu"
+        val imagePays = pays?.imageResourceId
+        val descriptionPays = pays?.desc ?: "Description inconnu"
+
+        println(descriptionPays+"-"+nomPays)
+        // recuperer et changer le nom du pays avec id nomp
+        val textView = view.findViewById<TextView>(R.id.NomPays)
+        // changer le nom du pays
+        textView?.text = nomPays
+        // recuperer et changer l'image du pays avec id img
+        val imageView = view.findViewById<ImageView>(R.id.imageHaut)
+        // changer l'image du pays
+        imageView?.setImageResource(imagePays!!)
+
+
+    }
+
+    fun onclickerVoirplus() {
+        val action = ActivityVille_InfoDirections.actionActivityVilleInfoToAttractionDetails()
+        findNavController().navigate(action)
+    }
+
+    fun onclickHotels() {
+        val action2 = ActivityVille_InfoDirections.actionActivityVilleInfoToHotelFragment2()
+        findNavController().navigate(action2)
+    }
+
+    fun onclickResto(){
+        val action3 = ActivityVille_InfoDirections.actionActivityVilleInfoToRestoFragment()
+        findNavController().navigate(action3)
     }
 }

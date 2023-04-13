@@ -11,11 +11,41 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home2_to_activityVille_Info"
-            app:destination="@id/activityVille_Info" />
+            app:destination="@id/activityVille_Info">
+        <argument
+            android:name="pays"
+            app:argType="string" />
+        </action>
+
     </fragment>
     <fragment
         android:id="@+id/activityVille_Info"
         android:name="com.example.test1_projet.ActivityVille_Info"
         android:label="fragment_activity_ville__info"
-        tools:layout="@layout/fragment_activity_ville__info" />
+        tools:layout="@layout/fragment_activity_ville__info" >
+        <action
+            android:id="@+id/action_activityVille_Info_to_attractionDetails"
+            app:destination="@id/attractionDetails" />
+        <action
+            android:id="@+id/action_activityVille_Info_to_hotelFragment2"
+            app:destination="@id/hotelFragment" />
+        <action
+            android:id="@+id/action_activityVille_Info_to_restoFragment"
+            app:destination="@id/restoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attractionDetails"
+        android:name="com.example.test1_projet.attractionDetails"
+        android:label="fragment_attraction_details"
+        tools:layout="@layout/fragment_attraction_details" />
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.example.test1_projet.hotelFragment"
+        android:label="fragment_hotel_list"
+        tools:layout="@layout/fragment_hotel_list" />
+    <fragment
+        android:id="@+id/restoFragment"
+        android:name="com.example.test1_projet.restoFragment"
+        android:label="fragment_resto_list"
+        tools:layout="@layout/fragment_resto_list" />
 </navigation>

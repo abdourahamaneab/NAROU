@@ -6,24 +6,27 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="230dp"
+        android:layout_width="wrap_content"
         android:layout_height="160dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/recycler_image"
-            android:layout_width="wrap_content"
+            android:layout_width="299dp"
             android:layout_height="wrap_content"
+            android:contentDescription="TODO"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/amritsar_golden_temple"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/amritsar_golden_temple" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="297dp"
             android:layout_height="80dp"
             android:layout_gravity="bottom"
             android:background="#80FFFFFF">
@@ -32,12 +35,12 @@
                 android:id="@+id/recycler_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif"
                 android:text="The Golden Temple"
                 android:textColor="@color/black"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

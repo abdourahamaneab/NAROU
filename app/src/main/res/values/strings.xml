@@ -18,4 +18,7 @@
     <string name="Dubai"> Dubai </string>
     <string name="Mexique"> Mexique </string>
     <string name="Chine"> Chine </string>
+    <string name="voirPlus"> Voir plus </string>
+    <string name="allera"> Aller à</string>
+    <string name="resrever"> Reserver </string>
 </resources>

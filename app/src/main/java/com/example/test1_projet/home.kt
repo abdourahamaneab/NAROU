@@ -22,7 +22,7 @@ class home : Fragment() {
     private var flipper: AdapterViewFlipper? = null
     private var list: ArrayList<AdapterFlipperModel>? = null
     private var adapter: AdapteurFlippeur? = null
-    lateinit var franceClick : CardView
+    lateinit var cardClick : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,14 +53,49 @@ class home : Fragment() {
         flipper!!.startFlipping()
         flipper!!.flipInterval = 3000
 
-        franceClick = view.findViewById(R.id.france_home)
-        franceClick.setOnClickListener {
-
-            val action = homeDirections.actionHome2ToActivityVilleInfo()
-            // faire une action pour aller vers la page de la ville
-            findNavController().navigate(action)
+        // click sur la carte de france
+        cardClick = view.findViewById(R.id.france_home)
+        cardClick.setOnClickListener {
+            onClick("France")
 
         }
+
+        // click sur la carte de chine
+        cardClick = view.findViewById(R.id.chineClick)
+        cardClick.setOnClickListener {
+            onClick("Chine")
+
+        }
+
+        // click sur la carte de mexique
+        cardClick = view.findViewById(R.id.mexiqueClique)
+        cardClick.setOnClickListener {
+            onClick("Mexique")
+
+        }
+
+        // click sur la carte de usa
+        cardClick = view.findViewById(R.id.usaClick)
+        cardClick.setOnClickListener {
+            onClick("USA")
+
+        }
+
+        // click sur la carte de italie
+        cardClick = view.findViewById(R.id.italieClick)
+        cardClick.setOnClickListener {
+            onClick("Italie")
+
+        }
+
+        // click sur la carte de dubai
+        cardClick = view.findViewById(R.id.dubaiClick)
+        cardClick.setOnClickListener {
+            onClick("Dubai")
+
+        }
+
+
 
         return view
     }
@@ -74,5 +109,18 @@ class home : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    fun onClick(pays: String) {
+
+
+
+
+
+        val action = homeDirections.actionHome2ToActivityVilleInfo(pays)
+
+        // faire une action pour aller vers la page de la ville
+        findNavController().navigate(action)
+
     }
 }
