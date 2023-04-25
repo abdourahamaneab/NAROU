@@ -5,7 +5,7 @@ import com.example.test1_projet.R
 
 class HotelsData {
             val france = listOf(
-                HotelsModels("Hôtel Malte - Astotel", R.drawable.stairs),
+                HotelsModels("Hôtel Malte - Astotel", R.drawable.china),
                 HotelsModels("Hôtel Bradford Elysées - Astotel", R.drawable.stairs),
                 HotelsModels("Hôtel de la Tamise - Astotel", R.drawable.stairs),
                 HotelsModels("Hôtel Le Milie Rose", R.drawable.exteriorhotel),
