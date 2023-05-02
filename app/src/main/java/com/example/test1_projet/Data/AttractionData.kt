@@ -10,7 +10,7 @@ class AttractionData {
         AttractionListModel(name = "Taj Mahal",4.5F, "40000", R.drawable.agra_taj_mahal)
     )
 
-    val italie = listOf(
+    val italie = listOf(  &
         AttractionListModel(name = "Tour de pise", 4F, "1000", R.drawable.tour_de_pise),
         AttractionListModel(name = "La Chappelle Sixtine", 4.5F,"3000", R.drawable.chapel_sixtine),
         AttractionListModel(name = "Le Colisée",4.5F, "40000", R.drawable.venise)
@@ -21,12 +21,26 @@ class AttractionData {
         AttractionListModel(name = "La Grande Muraille de Chine", 4.5F,"3000", R.drawable.muraille_de_chine),
         AttractionListModel(name = "Le Temple du Ciel",4.5F, "40000", R.drawable.ville_de_pekin)
           )
+    val mexique = listOf(
+
+
+    )
+    val usa = listOf(
+
+    )
+
+    val dubai = listOf(
+        
+    )
 
     fun getAttractionsByCountryName(name: String): List<AttractionListModel>? {
         return when (name) {
             "france" -> france
             "italie" -> italie
             "chine" -> chine
+            "mexique" -> mexique
+            "usa" -> usa
+            "dubai" -> dubai
             else -> null
         }
     }
