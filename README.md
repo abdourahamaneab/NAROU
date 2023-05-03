@@ -1,10 +1,10 @@
 # NAROU
 J'espère qu'on va bien travailler.
 
-Bonjour.
+#Bonjour.
 
-Tout d'abord, le dépôt a été créé après le projet, donc il a juste été ajouté en plus des petites modifications qui ont été faites plus tard.
-
+#Tout d'abord, le dépôt a été créé après le projet, donc il a juste été ajouté en plus des petites modifications qui ont été faites plus tard.
+#merci de votre compréhension 
 Manel Camara :
 
 - Créer toutes les classes dans le fichier "adapter".
@@ -21,3 +21,5 @@ Abdourahamane Abdoulaye Ida :
 - Créer le logo.
 - Mettre l'image du logo pour l'icône.
 - Créer le dépôt Git.
+
+# toutes les modifications de manel ont été faites sur le compte de abdurahamane ida car on pensaient rendre un fichier zip   
