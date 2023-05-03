@@ -1,23 +1,23 @@
 # NAROU
-J ESPERES QU ON VA BIEN TRAVAILLER
-bonjour 
-tout d abord le repository a été creer apres le projet de ce fait il a juste été ajouter en plus des petites modification qui ont été faites plus tard  
+J'espère qu'on va bien travailler.
 
-manel camara : 
+Bonjour.
 
-- creer toutes les classes dans le fichier adaptater 
-- creer toutes les classes du fichier models 
-- creer toutes les classes dans le fichier com.example.test1_projet
-- creer les fichiers xml du dossier drawable 
-- creer une partie des classes du layout 
+Tout d'abord, le dépôt a été créé après le projet, donc il a juste été ajouté en plus des petites modifications qui ont été faites plus tard.
 
+Manel Camara :
 
+- Créer toutes les classes dans le fichier "adapter".
+- Créer toutes les classes du fichier "models".
+- Créer toutes les classes dans le fichier "com.example.test1_projet".
+- Créer les fichiers XML du dossier "drawable".
+- Créer une partie des classes du layout.
 
-abdourahamane abdoulaye ida : 
+Abdourahamane Abdoulaye Ida :
 
-- creer toute les classes dans le fichier Data 
-- trouver une partie des images de drawable  
-- creer une partie des classes du layout
-- creer le logo 
-- mis l image du logo pour l icone
-- creer le depot git 
+- Créer toutes les classes dans le fichier "Data".
+- Trouver une partie des images du dossier "drawable".
+- Créer une partie des classes du layout.
+- Créer le logo.
+- Mettre l'image du logo pour l'icône.
+- Créer le dépôt Git.
