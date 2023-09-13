@@ -22,4 +22,4 @@ Abdourahamane Abdoulaye Ida :
 - Mettre l'image du logo pour l'icône.
 - Créer le dépôt Git.
 
-# toutes les modifications de manel ont été faites sur le compte de abdurahamane ida car on pensaient rendre un fichier zip   
+# toutes les modifications de manel ont été faites sur le compte de abdurahamane ida car on pensait rendre un fichier zip   
